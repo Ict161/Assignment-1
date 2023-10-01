@@ -1,2 +1,158 @@
 # Assignment-1
 Pdeu c programming assignment 1
+//q1
+
+#include <stdio.h>
+
+int main() {
+  
+    int items = 5;
+    float tax_rate = 0.07;
+    char currency_symbol = '$';
+    double subtotal = 23.45;
+
+    
+    double total = subtotal + (subtotal * tax_rate);
+
+   
+    printf("Number of items: %d\n", items);
+    printf("Tax rate: %.2f\n", tax_rate);
+    printf("Subtotal: %c%.2lf\n", currency_symbol, subtotal);
+    printf("Total: %c%.2lf\n", currency_symbol, total);
+
+    return 0;
+}
+
+//q2
+
+#include <stdio.h>
+
+int main() {
+    
+    int age = 25;
+    float height = 1.75;
+    char initial = 'R';
+    double weight = 65.5;
+    long long phone_number = 9876543210;
+    short zip_code = 12345;
+    unsigned int num_pets = 2;
+    signed int income_expense_diff = -500;
+
+    
+    printf("The age of the person is %d years\n", age);
+    printf("The height of the person is %.2f meters\n", height);
+    printf("The initial of the person's name is %c\n", initial);
+    printf("The weight of the person is %.1lf kilograms\n", weight);
+    printf("The phone number of the person is %lld\n", phone_number);
+    printf("The zip code of the person's address is %hd\n", zip_code);
+    printf("The number of pets owned by the person is %u\n", num_pets);
+    printf("The difference between income and expenses of the person is $%d\n", income_expense_diff);
+
+    return 0;
+}
+
+//q3
+
+#include <stdio.h>
+
+int main() {
+    int number, reversed = 0, remainder;
+    
+    printf("Enter a five-digit number: ");
+    scanf("%d", &number);
+
+    int originalNumber = number; //store the original number for later comparison
+
+    while (number != 0) {
+        remainder = number % 10;
+        reversed = reversed * 10 + remainder;
+        number /= 10;
+    }
+
+    printf("Reversed number is %d\n", reversed);
+
+    if (originalNumber == reversed) {
+        printf("The original and reversed numbers are equal.\n");
+    } else {
+        printf("The original and reversed numbers are not equal.\n");
+    }
+
+    return 0;
+}
+
+//Q4
+
+#include <stdio.h>
+
+int main() {
+    int angle1, angle2, angle3, sum;
+    
+    printf("Enter the first angle: ");
+    scanf("%d", &angle1);
+    printf("Enter the second angle: ");
+    scanf("%d", &angle2);
+    printf("Enter the third angle: ");
+    scanf("%d", &angle3);
+    
+    sum = angle1 + angle2 + angle3;
+    
+    if (sum == 180 && angle1 != 0 && angle2 != 0 && angle3 != 0) {
+        printf("The triangle is valid\n");
+    } else {
+        printf("The triangle is invalid\n");
+    }
+    
+    return 0;
+}
+
+//Q5
+#include <stdio.h>
+
+int main() {
+   char ch;
+   printf("Enter a character: ");
+   scanf("%c", &ch);
+
+   if (ch >= 'a' && ch <= 'z') {
+      printf("Lowercase character.\n");
+   } else if (ch >= 'A' && ch <= 'Z') {
+      printf("Uppercase character.\n");
+   } else {
+      printf("Non-alphabetic character.\n");
+   }
+
+   switch (ch) {
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+      case 'A':
+      case 'E':
+      case 'I':
+      case 'O':
+      case 'U':
+         printf("Vowel.\n");
+         break;
+      default:
+         printf("Consonant.\n");
+         break;
+   }
+
+   return 0;
+}
+
+//Q6
+
+#include<stdio.h>
+
+int main()
+{
+    int small_side=2;
+    int large_side=(3*small_side);
+    int perimeter=(3*large_side);
+    printf("The Perimeter of large triangle is : %d \n",perimeter);
+  
+
+    return 0;
+}
